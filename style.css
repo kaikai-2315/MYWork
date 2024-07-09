@@ -1,0 +1,153 @@
+@charset "utf-8" ;
+
+html {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: white;
+}
+
+#header {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 270px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 200px 280px;
+}
+
+header h1 {
+  height: 70px;
+}
+
+
+header ul {
+  width: 70%;
+  height: 70px;
+  display: flex;
+}
+header li {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  line-height: 4;
+}
+
+header img { 
+width: 25px;
+}
+/* １番デカい画像 */
+#mainvisual  picture img {
+  width: 100%;
+}
+/* 共通の要素 */
+.wrapper {
+  width: 70%;
+  margin: 0 auto 100px;
+}
+/* アバウト */
+.sec-title  {
+  text-align: center;
+  padding: 100px 0;
+}
+/* Works */
+#Works img {
+  width: 100%;
+}
+#Works ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#Works li {
+  width: 33.3%;
+  padding: 2%;
+}
+/* news */
+-------------------------------------------*/
+#news dl {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px gray;
+  margin-bottom: 20px;
+}
+#news dt {
+  width: 20%;
+  border-bottom: solid 1px gray;
+  padding: 15px;
+}
+#news dd {
+  width: 80%;
+  border-bottom: solid 1px gray;
+  padding: 15px;
+}
+/* contact */
+#contact dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+#contact dt {
+  width: 15%;
+}
+#contact dd {
+  width: 85%;
+  margin-bottom: 10px;
+}
+#contact dd input,
+#contact dd textarea {
+  width: 100%;
+  border: solid 1px gray;
+  padding: 10px;
+}
+#contact dd textarea {
+  height: 10rem;
+}
+#contact .button {
+  text-align: center;
+}
+#contact .button input {
+  width: 200px;
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+  border: solid 1px black;
+}
+#contact .button input:hover {
+  background: white;
+  color: black;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
