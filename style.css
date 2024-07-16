@@ -1,31 +1,42 @@
 @charset "utf-8" ;
-
+@charset "UTF-8";
 html {
   font-size: 100%;
 }
-
+body {
+  color: #24292e;
+}
 a {
   text-decoration: none;
 }
 img {
   max-width: 100%;
 }
-
 li {
   list-style: none;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style: none;
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+.site-title {
+  line-height: 1px;
+}
+.site-title a {
+  display: block;
+}
+.sec-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
 }
 
-body {
-  background-color: white;
-}
-
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
 #header {
   max-width: 960px;
   display: flex;
@@ -35,81 +46,87 @@ body {
   margin: 0 auto;
   padding: 0 4%;
 }
-header {
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  font-size: 0.9rem;
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+#header li img.icon {
+  width: 20px;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+  margin-bottom: 80px;
+}
+#mainvisual img {
   width: 100%;
-  height: 70px;
-  background-color: white;
+  max-width: 1920px;
+  height: 420px;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about ul {
+  margin-bottom: 30px;
+}
+#about li:first-child {
+  margin-bottom: 30px;
+}
+#about p {
+  text-align:justify;
+}
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+#works ul {
   display: flex;
   justify-content: space-between;
-  padding: 200px 280px;
-}
-
-header h1 {
-  height: 70px;
-}
-
-
-header ul {
-  width: 70%;
-  height: 70px;
-  display: flex;
-}
-header li {
-  width: 100%;
-  height: 70px;
-  text-align: center;
-  line-height: 4;
-}
-
-header img { 
-width: 25px;
-}
-/* １番デカい画像 */
-#mainvisual  picture img {
-  width: 100%;
-}
-/* 共通の要素 */
-.wrapper {
-  width: 70%;
-  margin: 0 auto 100px;
-}
-/* アバウト */
-.sec-title  {
-  text-align: center;
-  padding: 100px 0;
-}
-/* Works */
-#Works img {
-  width: 100%;
-}
-#Works ul {
-  width: 100%;
-  display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
-#Works li {
-  width: 33.3%;
-  padding: 2%;
+#works li {
+  width: 31%;
+  margin-bottom: 23px;
 }
-/* news */
+
+/*-------------------------------------------
+News
 -------------------------------------------*/
 #news dl {
   display: flex;
   flex-wrap: wrap;
-  border-top: solid 1px gray;
+  border-top: solid 1px #c8c8c8;
   margin-bottom: 20px;
 }
 #news dt {
   width: 20%;
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px #c8c8c8;
   padding: 15px;
 }
 #news dd {
   width: 80%;
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px #c8c8c8;
   padding: 15px;
 }
-/* contact */
+
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
 #contact dl {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +142,7 @@ width: 25px;
 #contact dd input,
 #contact dd textarea {
   width: 100%;
-  border: solid 1px gray;
+  border: solid 1px #c8c8c8;
   padding: 10px;
 }
 #contact dd textarea {
@@ -136,18 +153,95 @@ width: 25px;
 }
 #contact .button input {
   width: 200px;
-  background-color: black;
-  color: white;
+  background-color: #24292e;
+  color: #fff;
   padding: 15px 0;
-  border: solid 1px black;
+  border: solid 1px #24292e;
 }
 #contact .button input:hover {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #24292e;
 }
-footer {
-  background-color: black;
-  color: white;
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+#footer {
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 10px 20px;
   text-align: center;
-  margin: 0 auto;
 }
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-bottom: 70px;
+  }
+  .site-title {
+    margin-top: 20px;
+  }
+  .sec-title {
+    margin-bottom: 40px;
+  }
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  #header {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  #header li {
+    font-size: 0.8rem;
+    margin-left: 20px;
+  }
+  #header li:first-child {
+    margin-left: 0;
+  }
+
+  /*-------------------------------------------
+  Works
+  -------------------------------------------*/
+  #works ul {
+    flex-direction: column;
+  }
+  #works li {
+    width: 100%;
+  }
+
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  #news dl {
+    flex-direction: column;
+  }
+  #news dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #news dd {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  /*-------------------------------------------
+  Contact
+  -------------------------------------------*/
+  #contact dl {
+    flex-direction: column;
+  }
+  #contact dt {
+    width: 100%;
+  }
+  #contact dd {
+    width: 100%;
+  }
+}
+
+
