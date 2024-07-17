@@ -1,17 +1,12 @@
 @charset "utf-8" ;
-@charset "UTF-8";
-html {
-  font-size: 100%;
-}
+
 body {
   color: #24292e;
 }
 a {
   text-decoration: none;
 }
-img {
-  max-width: 100%;
-}
+
 li {
   list-style: none;
 }
@@ -95,23 +90,24 @@ Works
 -------------------------------------------*/
 #works ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
 #works li {
-  width: 31%;
+  width: 33%;
   margin-bottom: 23px;
 }
-
+#works img {
+  width: 100%;
+}
 /*-------------------------------------------
 News
 -------------------------------------------*/
 #news dl {
+  width: 100%;
+}
+.yotei {
   display: flex;
-  flex-wrap: wrap;
-  border-top: solid 1px #c8c8c8;
-  margin-bottom: 20px;
 }
 #news dt {
   width: 20%;
@@ -128,8 +124,6 @@ News
 Contact
 -------------------------------------------*/
 #contact dl {
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 #contact dt {
@@ -241,6 +235,9 @@ SP
   }
   #contact dd {
     width: 100%;
+  }
+  .yotei {
+    flex-direction: column;
   }
 }
 
